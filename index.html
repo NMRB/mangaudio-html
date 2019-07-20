@@ -11,14 +11,27 @@
       position: relative;
     }
     body img{
+      transition: all 0.2s ease-in-out;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%)  scale(1, 1);
       max-width: 100%;
+    }
+    body img:active {
+      transform: translate(-50%, -50%) scale(0.8, 0.8);
     }
   </style>
   <body>
-    <img src="mango.png" alt="mango image">
+    <script>
+function play(){
+   var audio = document.getElementById("audio");
+   audio.play();
+             }
+</script>
+
+
+<audio id="audio" src="pop.mp3" ></audio>
+    <img src="mango.png" alt="mango image" onclick="play()">
   </body>
 </html>
